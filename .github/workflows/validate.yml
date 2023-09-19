@@ -32,6 +32,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Output Node.js version
         run: node --version
+      - name: Output NPM version
+        run: npm --version
+      - name: Install JS standard rules package
+        run: npm install eslint-config-standard --no-save
+        working-directory: ../
       - name: Lint and check format with eslint
         run: npx eslint .
   summarize:
