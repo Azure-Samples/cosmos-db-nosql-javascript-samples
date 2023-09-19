@@ -22,8 +22,9 @@ export COSMOS_KEY="<cosmos-account-PRIMARY-KEY>"
 Run the quickstart sample app using the [`@azure/cosmos`](https://www.npmjs.com/package/@azure/cosmos) package from NPM.
 
 ```bash
+cd 001-quickstart/
 npm install @azure/cosmos
-node 001-quickstart/app.js
+npm run start
 ```
 
 ### Validate any changes you make
@@ -38,4 +39,12 @@ npm install eslint-config-standard --no-save
 ```bash
 cd ./001-quickstart/
 npx eslint .
+```
+
+### Troubleshooting certificate errors
+
+If you use a self-signed certificate, you may need to disable Node's validation:
+
+```javascript
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
 ```
