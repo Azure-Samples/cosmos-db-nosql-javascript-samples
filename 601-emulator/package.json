@@ -5,6 +5,6 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "@azure/cosmos": "^4.x"
+    "@azure/cosmos": "^4.*"
   }
 }
